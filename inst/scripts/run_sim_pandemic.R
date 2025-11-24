@@ -3,6 +3,13 @@ library(data.table)
 library(future)
 library(future.apply)
 
+# not exact, works for differentiating LSHTM HPC from running locally
+on_hpc <- nchar(Sys.getenv("SLURM_CLUSTER_NAME")) > 0
+
+cat("Running on HPC: ", on_hpc, "\n")
+
+cat("Running interactively: ", interactive(), "\n")
+
 cat("Installing {ringbp}... \n")
 
 pkg_install("epiforecasts/ringbp@238b4203ff22acd618f5e4588fe7c425eff01083")
