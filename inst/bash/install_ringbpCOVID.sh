@@ -7,4 +7,4 @@
 pwd; hostname; date
 
 ml R/4.4.0
-Rscript -e "pak::pkg_install('joshwlambert/ringbpCOVID')"
+Rscript -e "remotes::install_github('joshwlambert/ringbpCOVID')"
