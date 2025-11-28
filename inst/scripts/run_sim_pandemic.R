@@ -1,4 +1,4 @@
-library(pak)
+library(remotes)
 library(data.table)
 library(future)
 library(future.apply)
@@ -12,7 +12,7 @@ cat("Running interactively: ", interactive(), "\n")
 
 cat("Installing {ringbp}... \n")
 
-pkg_install("epiforecasts/ringbp@238b4203ff22acd618f5e4588fe7c425eff01083")
+install_github("epiforecasts/ringbp@238b4203ff22acd618f5e4588fe7c425eff01083")
 
 library(ringbp)
 
@@ -61,9 +61,9 @@ n <- 10
 # Set up multicore if using see ?future::plan for details
 # Use the workers argument to control the number of cores used.
 if (!interactive() && on_hpc) {
-  future::plan("multicore", workers = 16)
+  future::plan("multisession", workers = future::availableCores())
 } else {
-  future::plan("multisession", workers = 4)
+  future::plan("multisession", workers = max(1, future::availableCores() - 2))
 }
 
 # Run parameter sweep
