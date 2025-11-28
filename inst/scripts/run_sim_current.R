@@ -1,13 +1,22 @@
-library(pak)
+library(remotes)
 library(data.table)
 library(future)
 library(future.apply)
 
-pkg_install("joshwlambert/ringbp@FluTracerPilot")
+# not exact, works for differentiating LSHTM HPC from running locally
+on_hpc <- nchar(Sys.getenv("SLURM_CLUSTER_NAME")) > 0
+
+cat("Running on HPC: ", on_hpc, "\n")
+
+cat("Running interactively: ", interactive(), "\n")
+
+cat("Installing {ringbp}... \n")
+
+install_github("joshwlambert/ringbp@FluTracerPilot")
 
 library(ringbp)
 
-cat("Using {ringbp} version", as.character(packageVersion("ringbp")))
+cat("Using {ringbp} version", as.character(packageVersion("ringbp")), "\n")
 
 scenarios <- data.table(
   expand.grid(
@@ -50,14 +59,14 @@ scenarios[, scenario :=  1:.N]
 
 scenario_sims <- scenarios[, list(data = list(.SD)), by = scenario]
 
-n <- 10
+n <- 100
 
 # Set up multicore if using see ?future::plan for details
 # Use the workers argument to control the number of cores used.
 if (!interactive() && on_hpc) {
-  future::plan("multicore", workers = 16)
+  future::plan("multisession", workers = future::availableCores())
 } else {
-  future::plan("multisession", workers = 4)
+  future::plan("multisession", workers = max(1, future::availableCores() - 2))
 }
 
 # Run parameter sweep
@@ -86,6 +95,10 @@ scenario_sims[, sims := future_lapply(data, \(x, n) {
 n = n,
 future.seed = TRUE
 )]
+
+cat("Finished simulation... \n")
+
+cat("Saving simulation results... \n")
 
 saveRDS(
   object = scenario_sims,
