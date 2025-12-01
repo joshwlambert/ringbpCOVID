@@ -9,12 +9,22 @@ Description: This package contains the scripts to compare the model output
     of the ringbp R package across different versions of the package to
     see how the results change.
 License: MIT + file LICENSE
+Depends:
+    R (>= 4.4.0)
 Imports:
     data.table,
-    ggplot2,
     future,
     future.apply,
-    pak
+    ggplot2,
+    grDevices,
+    pak,
+    rlang
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.3
+Suggests: 
+    roxyglobals
+Roxygen: list(roclets = c("collate", "namespace", "rd",
+    "roxyglobals::global_roclet"))
+Config/roxyglobals/filename: globals.R
+Config/roxyglobals/unique: FALSE
