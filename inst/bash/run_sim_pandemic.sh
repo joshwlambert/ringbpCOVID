@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=ringbpCOVID
-#SBATCH --ntasks=16
+#SBATCH --ntasks=64
 #SBATCH --nodes=1
 #SBATCH --mem=10GB
 #SBATCH --time=05:00:00
