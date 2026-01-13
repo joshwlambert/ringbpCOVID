@@ -12,12 +12,14 @@ License: MIT + file LICENSE
 Depends:
     R (>= 4.4.0)
 Imports:
+    binom,
     data.table,
     future,
     future.apply,
     ggplot2,
     grDevices,
     pak,
+    ringbp,
     rlang
 Encoding: UTF-8
 LazyData: true
