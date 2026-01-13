@@ -1,6 +1,7 @@
 library(data.table)
 library(ringbp)
 library(ggplot2)
+library(binom)
 
 # read in results from run_sim_pandemic.R and run_sim_current.R
 pandemic <- readRDS(file.path("inst", "extdata", "covid_sim_pandemic_ver.rds"))
@@ -60,9 +61,22 @@ current_data[, version := "current"]
 
 covid_data <- rbindlist(list(pandemic_data, current_data), use.names = TRUE)
 
+# get number of simulation replicates from simulation object
+# all simulations have the same number of replicates so get from first element
+nsim <- max(pandemic$sims[[1]]$sim)
+
+# calculate binomial CI
+wilson_binom_ci <- binom::binom.wilson(
+  x = covid_data$pext * nsim,
+  n = nsim,
+  conf.level = 0.95
+)
+covid_data$pext_lower_ci <- wilson_binom_ci$lower
+covid_data$pext_upper_ci <- wilson_binom_ci$upper
+
 prop_outbreak_control <- covid_data[
   initial_cases == 20 & prop_presymptomatic == "15%" & delay == "SARS" & prop_asymptomatic == 0,
-  .(prop_ascertain, r0_community, pext, version)
+  .(prop_ascertain, r0_community, pext, pext_lower_ci, pext_upper_ci, version)
 ]
 
 outbreak_control_r_plot <- ggplot2::ggplot(
@@ -75,7 +89,7 @@ outbreak_control_r_plot <- ggplot2::ggplot(
 ) +
   ggplot2::geom_line(
     ggplot2::aes(linetype = version),
-    size = 0.75
+    linewidth = 0.75
   ) +
   ggplot2::geom_point(
     ggplot2::aes(fill = as.factor(r0_community), shape = version),
@@ -85,11 +99,6 @@ outbreak_control_r_plot <- ggplot2::ggplot(
   ) +
   ggplot2::scale_x_continuous(
     name = "Contacts traced (%)",
-    breaks = seq(0, 1, 0.2),
-    labels = seq(0, 100, 20)
-  ) +
-  ggplot2::scale_y_continuous(
-    name = "Simulated outbreaks controlled (%)",
     breaks = seq(0, 1, 0.2),
     labels = seq(0, 100, 20)
   ) +
@@ -105,9 +114,58 @@ outbreak_control_r_plot <- ggplot2::ggplot(
   ggplot2::theme_bw() +
   ggplot2::theme(legend.position = "bottom")
 
+# plot on linear y-axis
+outbreak_control_r_plot_lin <- outbreak_control_r_plot +
+  ggplot2::scale_y_continuous(
+    name = "Simulated outbreaks controlled (%)",
+    breaks = seq(0, 1, 0.2),
+    labels = seq(0, 100, 20)
+  )
+
 ggplot2::ggsave(
   file.path("inst", "plots", "outbreak_control_r.png"),
-  plot = outbreak_control_r_plot,
+  plot = outbreak_control_r_plot_lin,
+  device = "png",
+  width = 150,
+  height = 125,
+  units = "mm",
+  dpi = 300
+)
+
+# plot with error bars around points
+outbreak_control_r_plot_lin_ci <- outbreak_control_r_plot_lin +
+  ggplot2::geom_errorbar(
+    mapping = ggplot2::aes(
+      ymin = pext_lower_ci,
+      ymax = pext_upper_ci
+    ),
+    width = 0.01
+  )
+
+ggplot2::ggsave(
+  file.path("inst", "plots", "outbreak_control_r_ci.png"),
+  plot = outbreak_control_r_plot_lin_ci,
+  device = "png",
+  width = 150,
+  height = 125,
+  units = "mm",
+  dpi = 300
+)
+
+# continuity correction for logit transformation on proportion
+prop_outbreak_control[, pext := (pext * nsim + 0.5) / (nsim + 1)]
+
+# plot on logit transform y-axis
+outbreak_control_r_plot_logit <- outbreak_control_r_plot +
+  ggplot2::scale_y_continuous(
+    name = "Odds of outbreak control",
+    transform = "logit",
+    breaks = c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99)
+  )
+
+ggplot2::ggsave(
+  file.path("inst", "plots", "outbreak_control_r_logit.png"),
+  plot = outbreak_control_r_plot_logit,
   device = "png",
   width = 150,
   height = 125,
