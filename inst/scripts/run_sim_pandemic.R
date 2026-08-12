@@ -3,6 +3,9 @@ library(data.table)
 library(future)
 library(future.apply)
 
+# set data.table OpenMP to not paralellise
+setDTthreads(1)
+
 # not exact, works for differentiating LSHTM HPC from running locally
 on_hpc <- nchar(Sys.getenv("SLURM_CLUSTER_NAME")) > 0
 
@@ -36,7 +39,10 @@ scenarios <- data.table(
     prop.asym = c(0, 0.1),
     control_effectiveness = seq(0, 1, 0.2),
     num.initial.cases = c(5, 20, 40),
-    quarantine = FALSE,
+    # Hellewell et al. (2020) ran every scenario with quarantine inactive. Both
+    # settings are swept here so that the quarantine-active comparison uses an
+    # identical grid; downstream scripts subset to the arm they need.
+    quarantine = c(FALSE, TRUE),
     cap_max_days = 365,
     cap_cases = 5000
   )
@@ -58,6 +64,10 @@ scenario_sims <- scenarios[, list(data = list(.SD)), by = scenario]
 
 n <- 1000
 
+# future.seed derives its L'Ecuyer streams from the current RNG state, so a
+# fixed seed here makes the whole sweep reproducible
+set.seed(20200124)
+
 # Set up multicore if using see ?future::plan for details
 # Use the workers argument to control the number of cores used.
 if (!interactive() && on_hpc) {
@@ -68,6 +78,9 @@ if (!interactive() && on_hpc) {
 
 # Run parameter sweep
 scenario_sims[, sims := future_lapply(data, \(x, n) {
+  # multisession workers are fresh R sessions that do not inherit the parent's
+  # thread setting, so cap threads inside the worker too
+  data.table::setDTthreads(1)
   scenario_sim(
     n.sim = n,
     num.initial.cases = x$num.initial.cases,
