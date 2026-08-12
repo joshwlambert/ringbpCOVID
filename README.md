@@ -17,4 +17,11 @@ You can install the development version of ringbpCOVID like so:
 pak::pkg_install("joshwlambert/ringbpCOVID")
 ```
 
+## Compile paper 
+
+To compile the paper from the `.tex` and `.bib` files in `inst/paper/` run:
+
+```r
+compile_paper()
+```
 
