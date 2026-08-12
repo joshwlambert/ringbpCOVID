@@ -1,8 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=ringbpCOVID
-#SBATCH --ntasks=64
+#SBATCH --job-name=ringbp_current
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=64
 #SBATCH --nodes=1
-#SBATCH --mem=10GB
+#SBATCH --mem=64GB
 #SBATCH --time=05:00:00
 #SBATCH --output=%x_%j.log
 pwd; hostname; date
