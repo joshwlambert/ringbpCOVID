@@ -15,7 +15,12 @@ cat("Running interactively: ", interactive(), "\n")
 
 cat("Installing {ringbp}... \n")
 
-install_github("epiforecasts/ringbp@238b4203ff22acd618f5e4588fe7c425eff01083")
+# upgrade = "never" so dependencies are not upgraded
+# (already installed by install_ringbpCOVID.sh)
+install_github(
+  "epiforecasts/ringbp@238b4203ff22acd618f5e4588fe7c425eff01083",
+  upgrade = "never"
+)
 
 library(ringbp)
 
