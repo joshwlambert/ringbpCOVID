@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="400mm"
+   height="200mm"
+   viewBox="0 0 400 200"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodi:docname="timeline.svg"
+   inkscape:export-filename="timeline.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.5946522"
+     inkscape:cx="781.9697"
+     inkscape:cy="400.23395"
+     inkscape:window-width="1512"
+     inkscape:window-height="846"
+     inkscape:window-x="2370"
+     inkscape:window-y="106"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow2"
+       markerWidth="7.6999998"
+       markerHeight="5.5999999"
+       viewBox="0 0 7.7 5.6"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="arrow2L" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#71ba98;fill-opacity:0.3;stroke:#000000;stroke-width:0.5;stroke-dasharray:2,0.5;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="M 130.28143,6.0340447e-4 130.47458,199.9994"
+       id="path5612-8" />
+    <rect
+       style="fill:#71ba98;fill-opacity:0.3;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       id="rect2570-7"
+       width="400"
+       height="100"
+       x="5e-07"
+       y="100" />
+    <rect
+       style="fill:#559fd8;fill-opacity:0.3;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       id="rect2570"
+       width="400"
+       height="100"
+       x="7.4431154e-07"
+       y="7.4431154e-07" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 186.54669,156.20943 c 0.0821,-56.04518 0.0821,-56.04518 0.0821,-56.04518 v 0"
+       id="path6873-8" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       x="4.6837401"
+       y="54.622974"
+       id="text2422"><tspan
+         sodipodi:role="line"
+         id="tspan2420"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0"
+         x="4.6837401"
+         y="54.622974">Global and UK</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0"
+         x="4.6837401"
+         y="63.442417"
+         id="tspan2474">COVID events</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       x="4.782959"
+       y="154.62607"
+       id="text2422-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0"
+         x="4.782959"
+         y="154.62607"
+         id="tspan5663"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold'"
+   id="tspan5612">ringbp</tspan> milestones</tspan></text>
+    <path
+       style="fill:#71ba98;fill-opacity:0.3;stroke:#000000;stroke-width:0.5;stroke-dasharray:2, 0.5;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="M 230.25,6.0318765e-4 230.44302,199.9994"
+       id="path5612" />
+    <path
+       style="fill:#71ba98;fill-opacity:0.3;stroke:#000000;stroke-width:0.5;stroke-dasharray:2, 0.5;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="M 320.25,6.0318766e-4 320.44302,199.9994"
+       id="path5612-5" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+       x="180.99384"
+       y="14.545459"
+       id="text5718"><tspan
+         sodipodi:role="line"
+         id="tspan5716"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="180.99384"
+         y="14.545459">January</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="180.99384"
+         y="22.482958"
+         id="tspan4028">2020</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+       x="104.10326"
+       y="14.545459"
+       id="text5718-69"><tspan
+         sodipodi:role="line"
+         id="tspan5716-01"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="104.10326"
+         y="14.545459">December</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="104.10326"
+         y="22.482958"
+         id="tspan4026">2019</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+       x="272.05997"
+       y="14.545459"
+       id="text5718-6"><tspan
+         sodipodi:role="line"
+         id="tspan5716-4"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="272.05997"
+         y="14.545459">Feburary</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="272.05997"
+         y="22.482958"
+         id="tspan4768">2020</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+       x="358.03851"
+       y="14.545459"
+       id="text5718-4"><tspan
+         sodipodi:role="line"
+         id="tspan5716-0"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="358.03851"
+         y="14.545459">March</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0"
+         x="358.03851"
+         y="22.482958"
+         id="tspan4770">2020</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 104.77596,99.743755 c 0.14207,-25.645367 0.14207,-25.645367 0.14207,-25.645367 v 0"
+       id="path6873" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077"
+       cx="104.91676"
+       cy="72.833412"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="M 75,100.07669 H 393.74307"
+       id="path17390" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-8"
+       cx="186.5"
+       cy="157.543"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="104.2776"
+       y="56.356026"
+       id="text7183"><tspan
+         sodipodi:role="line"
+         id="tspan7181"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="104.2776"
+         y="56.356026">8-12 Dec</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="104.2776"
+         y="62.529636"
+         id="tspan7185">First symptomatic</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="104.2776"
+         y="68.703247"
+         id="tspan7187">case, China</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 191.3592,99.635578 c 0.14208,-25.645367 0.14208,-25.645367 0.14208,-25.645367 v 0"
+       id="path6873-0" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-7"
+       cx="191.5"
+       cy="72.725235"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 211.30081,99.885294 c 0.14754,-49.99857 0.14754,-49.99857 0.14754,-49.99857 v 0"
+       id="path6873-0-6" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-7-9"
+       cx="211.5"
+       cy="48.489853"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="192.00465"
+       y="54.860413"
+       id="text7183-1"><tspan
+         sodipodi:role="line"
+         id="tspan7181-6"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="192.00465"
+         y="54.860413">30 Jan</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="192.00465"
+         y="61.034023"
+         id="tspan7187-9">First confirmed</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="192.00465"
+         y="67.207634"
+         id="tspan18229">case in UK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="210.88336"
+       y="14.522822"
+       id="text7183-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan7181-6-6"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="210.88336"
+         y="14.522822">31 Jan</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="210.88336"
+         y="20.696434"
+         id="tspan18229-8">WHO declares</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="210.88336"
+         y="26.870047"
+         id="tspan18381">Public Health</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="210.88336"
+         y="33.043659"
+         id="tspan19121">Emergency of</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="210.88336"
+         y="39.217274"
+         id="tspan19861">International </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="210.88336"
+         y="45.390884"
+         id="tspan2448">Concern</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 147.88077,99.604401 c 0.14446,-13.368872 0.14446,-13.368872 0.14446,-13.368872 v 0"
+       id="path6873-0-7" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-7-6"
+       cx="148.18007"
+       cy="85.12468"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="148.26424"
+       y="69.192291"
+       id="text7183-1-8"><tspan
+         sodipodi:role="line"
+         id="tspan7181-6-2"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="148.26424"
+         y="69.192291">9 Jan</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="148.26424"
+         y="75.365906"
+         id="tspan7187-9-3">First confirmed </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="148.26424"
+         y="81.539513"
+         id="tspan11864">death in China</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="185.3764"
+       y="166.40282"
+       id="text7183-9"><tspan
+         sodipodi:role="line"
+         id="tspan7181-4"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="185.3764"
+         y="166.40282">23 Jan</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="185.3764"
+         y="172.57643"
+         id="tspan7187-0">First commit</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="185.3764"
+         y="178.75005"
+         id="tspan18239">to GitHub</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 306.46824,145.54409 c 0.10774,-45.16472 0.10774,-45.16472 0.10774,-45.16472 v 0"
+       id="path6873-8-0" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-8-56"
+       cx="306.5"
+       cy="146.5"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="303.66882"
+       y="153.91064"
+       id="text7183-9-4"><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="303.66882"
+         y="153.91064"
+         id="tspan7187-0-2">28 Feb</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="303.66882"
+         y="160.08426"
+         id="tspan18239-3">Lancet Global</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="303.66882"
+         y="166.25787"
+         id="tspan21392">Health publish</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="303.66882"
+         y="172.43149"
+         id="tspan2446">online</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 257.48949,115.02558 c 0.14404,-15.257309 0.14404,-15.257309 0.14404,-15.257309 v 0"
+       id="path6873-8-0-9" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-8-56-8"
+       cx="257.474"
+       cy="116.51237"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="257.66003"
+       y="123.04897"
+       id="text7183-9-4-0"><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="257.66003"
+         y="123.04897"
+         id="tspan7187-0-2-3">7 Feb</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="257.66003"
+         y="129.22258"
+         id="tspan21392-3">Model results</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="257.66003"
+         y="135.39619"
+         id="tspan27499">published online</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="257.66003"
+         y="141.56981"
+         id="tspan22919">CMMID website</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 142.19739,112.43242 c 0.14482,-11.84543 0.14482,-11.84543 0.14482,-11.84543 v 0"
+       id="path6873-8-9" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.279119;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-8-5"
+       cx="142.18228"
+       cy="113.81419"
+       rx="1.3604406"
+       ry="1.3604405" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="149.96716"
+       y="120.62165"
+       id="text7183-9-7"><tspan
+         sodipodi:role="line"
+         id="tspan7181-4-2"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="149.96716"
+         y="120.62165">6-10 Jan</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="149.96716"
+         y="126.79527"
+         id="tspan7187-0-9">Model</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="149.96716"
+         y="132.96889"
+         id="tspan2438">development</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="149.96716"
+         y="139.1425"
+         id="tspan18241">is proposed</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="149.96716"
+         y="145.3161"
+         id="tspan8785">CMMID Meeting,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="149.96716"
+         y="151.48972"
+         id="tspan18243">London, UK</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 380.84105,99.60579 c 0.10875,-38.145473 0.10875,-38.145473 0.10875,-38.145473 v 0"
+       id="path6873-3" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.27912;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-2"
+       cx="380.96518"
+       cy="59.980026"
+       rx="1.3604406"
+       ry="1.3604528" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="380.46088"
+       y="37.494244"
+       id="text7183-8"><tspan
+         sodipodi:role="line"
+         id="tspan7181-2"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="380.46088"
+         y="37.494244">26 Mar</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="380.46088"
+         y="43.667854"
+         id="tspan7187-8">UK enters</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="380.46088"
+         y="49.841469"
+         id="tspan18227">national</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="380.46088"
+         y="56.015079"
+         id="tspan2440">lockdown</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 340.32707,99.835137 c 0.14645,-9.171002 0.14645,-9.171002 0.14645,-9.171002 v 0"
+       id="path6873-3-4" />
+    <ellipse
+       style="fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0.27912;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7077-2-9"
+       cx="340.47003"
+       cy="89.393204"
+       rx="1.3604406"
+       ry="1.3604528" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c84b4b;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="340.54938"
+       y="67.276024"
+       id="text7183-8-9"><tspan
+         sodipodi:role="line"
+         id="tspan7181-2-6"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="340.54938"
+         y="67.276024">12 Mar</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="340.54938"
+         y="73.449638"
+         id="tspan18227-1">UK moves from</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="340.54938"
+         y="79.623245"
+         id="tspan25184">'contain' to 'delay'</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="340.54938"
+         y="85.79686"
+         id="tspan25186">phase</tspan></text>
+  </g>
+</svg>
