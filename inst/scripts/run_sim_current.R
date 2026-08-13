@@ -67,7 +67,9 @@ scenarios[, scenario :=  1:.N]
 
 scenario_sims <- scenarios[, list(data = list(.SD)), by = scenario]
 
-n <- 1000
+# PILOT RUN: reduced for quick turnaround on the HPC.
+# Restore to 5000 (the value used by Hellewell et al.) for the final results.
+n <- 100
 
 # future.seed derives its L'Ecuyer streams from the current RNG state, so a
 # fixed seed here makes the whole sweep reproducible
