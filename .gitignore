@@ -55,3 +55,6 @@ rsconnect/
 # macOS hidden files
 .DS_Store
 inst/doc
+
+# LaTeX log from compiling the paper
+inst/paper/*.log
