@@ -33,6 +33,12 @@
 % \RaggedRight (ragged2e) rather than \raggedright so narrow columns can hyphenate.
 \newcolumntype{L}[1]{>{\hsize=#1\hsize\RaggedRight\arraybackslash}X}
 
+% Centred, larger, bold header cell for the weighted X columns above. X columns
+% cannot be used inside \multicolumn, so the cell is centred by scoping
+% \centering to the cell and closing the paragraph with \par before the group
+% ends, which avoids \centering redefining the row-terminating \\.
+\newcommand{\thcell}[1]{\begingroup\centering\small\bfseries #1\par\endgroup}
+
   % longtable captions default to 4in; match the table width instead.
 \setlength{\LTcapwidth}{\textwidth}
 
@@ -78,9 +84,25 @@ The team at the London School of Hygiene and Tropical Medicine developing the ep
 
 Epidemic models can be framed as having two dimensions of correctness: 1) \textit{assumption correctness} (relevant model structure and parametrisation), and 2) \textit{implementation correctness} (bug-free model translation). Assumption correctness is the sensible construction of an infectious disease model (but applies to modeling in general), and that assumptions correctly approximate the empirical infection and transmission dynamics. Several groups wrote responses to \cite{Hellewell2020} \citep{Gurdasani2020, Mitj2020, Xiong2020}. While \cite{Eggo2020} and \cite{Hellewell2020b} clarified the limitations of the epidemic model, the responses raised important points around assumption correctness, particularly in the choice of simulation parameters and how these only represented a subset of all contact tracing and testing response strategies. Later during the pandemic, other researchers also extended the core epidemic model to include transmission through a social network \citep{Firth2020}, and behavioural response to isolation measures \citep{Davis2021}. \\
 
-Since the pandemic the utility of the \texttt{ringbp} model and the possibility of generalising it into a framework for evaluating targeted interventions for outbreak control were recognised. The post-pandemic development that followed affected both assumption and implementation correctness, and may cause substantial differences in model output. Supplementary table \ref{tab:dev-table} outlines each of the important model developments and links to the open-source development record. In this piece we reproduce the analysis of \cite{Hellewell2020} using both the pandemic version of \texttt{ringbp} (v0.1.0) and the current version (v2.0.0) to evaluate whether the results that informed public health decision making would differ today. We quantify differences in outbreak control, measured using the probability of extinction and simulated effective reproduction number. Additionally, we compare model output directly before and after each development; this includes changes that cannot influence the results of \citet{Hellewell2020}, because they fall output the parameter space of that study. Outbreak control is measured using the probability of extinction (P(extinct)) and the simulated effective reproduction number. We also compare the computational performance of
-the two versions. See the supplementary material for a full description of the
-methodology. \\
+Since the pandemic the utility of the \texttt{ringbp} model and the possibility of generalising it into a framework for evaluating targeted interventions for outbreak control were recognised. The post-pandemic development that followed affected both assumption and implementation correctness, and may cause substantial differences in model output. Supplementary table \ref{tab:dev-table} outlines each of the important model developments and links to the open-source development record. In this piece we reproduce the analysis of \cite{Hellewell2020} using both the pandemic version of \texttt{ringbp} (v0.1.0) and the current version (v2.0.0) to evaluate whether the results that informed public health decision making would differ today. We quantify differences in outbreak control, measured using the probability of extinction (P(extinct)) and simulated effective reproduction number. Additionally, we compare model output directly before and after each development; this includes changes that cannot influence the results of \citet{Hellewell2020}, because they fall outside the parameter space of that study. We also compare the computational performance of the two versions. See the supplementary material for a full description of the methodology. \\
+
+The original findings of \cite{Hellewell2020} showed that for a SARS-CoV-2 outbreak with a basic reproduction number ($R_0$) of 1.5, isolating cases and a short delay after symptom onset (averaging 3.8 days), and tracing at least 20\% of their contacts would control the majority of outbreaks. To control the majority of outbreaks for $R_0$ of 2.5, more than 60\% of contacts need to be successfully traced, and for $R_0$ of 3.5 more than 90\% of contats need to be traced. The number of initial cases and speed of onset-to-isolation  had effects on outbreak control, with smaller initial clusters much more likely to be contained. Asymptomatic cases and presymptomatic transmission reduced the efficacy of isolation and contact tracing, notably at moderate to high proportions of contacts traced. Reproducing the analysis of \cite{Hellewell2020}, we find the same qualitative patterns of outbreak control (Figure \ref{fig:outbreak-control-r} and \ref{fig:outbreak-control}). \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/outbreak_control_r_ci.png}
+    \caption{Reproduction of figure 3A in \cite{Hellewell2020} (pandemic version, diamonds) with the results using the current version (circles) of \texttt{ringbp} and confidence intervals overlayed. The percentage of outbreaks that are controlled for scenarios with varying basic reproduction number ($R_0$), at each value of contacts traced. The baseline scenario is 20 initial cases, a short delay to isolation, 15\% of transmission before symptom onset, and 0\% subclinical (asymptomatic) infection. A simulated outbreak is defined as controlled if there are no cases between weeks 12 and 16 after the initial cases.}
+    \label{fig:outbreak-control-r}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/outbreak_control.png}
+    \caption{Reproduction of figure 4 in \cite{Hellewell2020} (pandemic version, diamonds) with the results using the current version (circles) of \texttt{ringbp} overlayed. The percentage of outbreaks that are controlled for scenarios at each value of contacts traced, with varying outbreak parameters in each subplot. (A) The initial number of cases, (B) delay from symptom onset to isolation, (C) percentage of transmission before symptom onset, (D) the percentage of subclinical (asymptomatic) cases. The baseline scenario is R0 of 2.5, 20 initial cases, a short delay to isolation, 15\% of transmission before symptom onset, and 0\% subclinical infections. A simulated outbreak is defined as controlled if there are no cases between weeks 12 and 16 after the initial cases.}
+    \label{fig:outbreak-control}
+\end{figure}
+
+Quantitative differences between the pandemic and current \texttt{ringbp} version were found ... \\
 
 \bibliographystyle{plainnat}
 \bibliography{ringbpCOVID.bib}
@@ -88,15 +110,15 @@ methodology. \\
 \section*{Supplementary Material}
 
 \footnotesize
-\begin{xltabular}{\textwidth}{|L{0.3}|L{1.7}|L{1.7}|L{0.8}|L{0.75}|L{0.75}|}
+\begin{xltabular}{\textwidth}{|L{0.4}|L{1.65}|L{1.65}|L{0.8}|L{0.75}|L{0.75}|}
 \caption{The bugs and bug fixes in the ringbp R package since development restarted in the first quarter of 2025 until now (first quarter of 2026). Each row contains a brief description of the bug and the patch that attempts to resolve the bug. Development of ringbp takes place on GitHub with the use of GitHub issues as a bug tracker, and GitHub pull requests to integrate proposed changes into the codebase. The issue and pull request number(s) are also provided and linked for each row to see the history of development. This table does not include developments on package infrastructure. We categorise the change type based on the ISO/IEC 25010 Software Quality Model standard and additionally place the label based on Conventional Commits v1.0.0 specification in parentheses.}
 \label{tab:dev-table} \\
 \hline
-Label & Problem description & Change description & Change type & GitHub issue(s) & GitHub Pull request(s) \\
+\thcell{Label} & \thcell{Problem description} & \thcell{Change description} & \thcell{Change type} & \thcell{GitHub issue(s)} & \thcell{GitHub Pull request(s)} \\
 \hline\hline
 \endfirsthead
 \hline
-Label & Problem description & Change description & Change type & GitHub issue(s) & GitHub Pull request \\
+\thcell{Label} & \thcell{Problem description} & \thcell{Change description} & \thcell{Change type} & \thcell{GitHub issue(s)} & \thcell{GitHub Pull request(s)} \\
 \hline\hline
 \endhead
 \hline
@@ -104,7 +126,7 @@ Label & Problem description & Change description & Change type & GitHub issue(s)
 \endfoot
 \hline
 \endlastfoot
-\multicolumn{6}{|c|}{1 Intervention} \\
+\multicolumn{6}{|c|}{\normalsize\bfseries1 Intervention} \\
 \hline
 1a & When quarantine was active, only symptomatic cases that test positive were quarantined when contact traced. This meant that traced contacts that were asymptomatic or tests returned a false negative were not quarantined/isolated, and did not represent an exposure-based intervention aimed at isolating infections that symptom screening and testing misses, and reducing pre-symptomatic transmission. & The model logic for quarantine is updated so when active a contact that is traced as being exposed to an infector they are quarantined/isolated at the earliest of their infectors isolation time (independent of their symptom status or a test result) and the delay from symptom onset-to-isolation. & Bug\slash Model Choice & \ghissue{227} & \ghpr{213} \\
 \hline
@@ -114,7 +136,7 @@ Label & Problem description & Change description & Change type & GitHub issue(s)
  \hline
  1d & The model fixed the targeted interventions start on day zero of the outbreak (i.e. at the same time as the infection of the index case). This prevented modeling scenarios where contact tracing or testing only starts $n$ days after the start of the outbreak. & The probability of successfully contact tracing an infectee and the test sensitivity parameters have both been updated from strictly numeric scalar inputs to functions that can be defined as any time-varying functions whose output must be $[0,1]$. This allows contact tracing and testing to activate on a user-defined day and change in any user-define function, for example increasing capacity to trace or improved test sensitivity... The model accepts numeric scalar inputs for simplicity and backwards compatibility and these are converted internally to time-constant functions. & Enhancement & \ghissue{229} & \ghpr{230} \\
  \hline
- \multicolumn{6}{|c|}{2 Epidemic model} \\
+ \multicolumn{6}{|c|}{\normalsize\bfseries2 Epidemic model} \\
  \hline
  2a & The onset-to-isolation delay for each case in a generation is sampled from the onset-to-isolation delay distribution once and recycled for every case in that generation. This reduces the variance of the onset-to-isolation times. & The onset-to-isolation delay distribution is sampled for every individual in a generation, each getting an independent random draw from the distribution. & Bug\slash Model choice & \ghissue{94} & \ghpr{98} \\
  \hline
@@ -130,7 +152,7 @@ Label & Problem description & Change description & Change type & GitHub issue(s)
  \hline
  2g & The model assumed that test sensitivity was perfect. This is a reasonable assumption went modelling polymerase chain reaction (PCR) testing in an outbreak for infected individuals to isolate, as was done in \cite{Hellewell2020}. However, it restricts modelling different testing strategies that may also be application in outbreak response, such as lateral flow tests (LFTs), as mentioned by \cite{Gurdasani2020}. Varying test sensitivity was added as part of the \cite{Davis2021} work in extending a fork of \texttt{ringbp}, but this feature was never merged into the \texttt{ringbp} model. & A test sensitivity parameter specifying the probability of a test result being a true positive has been added to the model to enable some tests to return false negative results and these infected individuals are not isolated and their contacts are not traced. The test sensivity parameter defaults to one so is backwards compatible with the perfect sensitivity scenario. & Enhancement & \ghissue{176}, \ghissue{231} & \ghpr{196}, \ghpr{232} \\
  \hline
- \multicolumn{6}{|c|}{(3) User interface and flexibility} \\
+ \multicolumn{6}{|c|}{\normalsize\bfseries(3) User interface and flexibility} \\
  \hline
  3a & Update hardcoded COVID-19 parameters to flexibility user-interfacing parameters & The incubation period was hardcoded to be Weibull distributed with paramters shape ($k = 2.322737$) and scale ($\lambda = 6.492272$) and the onset-to-isolation delay distribution was hardcoded to be Weibull distributed, but in this case the parameters could be specified by the user. & Enhancement & \ghissue{59} & \ghpr{84} \\
  \hline
@@ -140,17 +162,17 @@ Label & Problem description & Change description & Change type & GitHub issue(s)
  \hline
  3d & The proportion of presymptomatic transmission was defined by the user via the shape/slant ($\alpha$) parameter. This required user knowledge on how the parameter was converted into the proportion of presymptomatic transmission, and had an uninformative parameter name (\texttt{k}). & Allow the user to directly define the proportion of presymptomatic transmission and calculate $\alpha$ internally using numerical optimisation. & Enhancement & \ghissue{119} & \ghpr{123} \\
  \hline
- \multicolumn{6}{|c|}{(4) Performance} \\
+ \multicolumn{6}{|c|}{\normalsize\bfseries(4) Performance} \\
  \hline
  4a & Sampling random events and condition handling was not optimised. Sampling random events was coded as \texttt{as.logical(\allowbreak rbinom(...))}, which can be improved by using \texttt{runif(x) < y}. The performance of condition handling has been improved both by the way the condition code is written and also using faster functions with equivalent functionality. & NOT SURE IF THIS CAN BE TESTED AS IT IS BUNDLDED WITH OTHER CHANGES & Enhancement & \ghissue{90}, \ghissue{92} & \ghpr{98} \\
  \hline
  4b & The data output from the outbreak scenario simulation did not efficienctly store data on outbreak generations and the effective reproduction number, with them being duplicated in the tabular (\texttt{data.table}) output for each outbreak replicate. & The outbreak scenario simulation now returns a list of two tabular data structures, an outbreak time series and outbreak statistics, to remove any duplicated data and reduce the memory footprint. & Enhancement & \ghissue{237} & \ghpr{239} \\
  \hline
- \multicolumn{6}{|c|}{(5) Testing and correctness} \\
+ \multicolumn{6}{|c|}{\normalsize\bfseries(5) Testing and correctness} \\
  \hline
  5a & Testing coverage across the package was ??\% and there were minimal tests for correctness for the epidemic model code & Correctness tests were added as well as ... & ??? & \ghissue{100} & ??? \\
  \hline
- \multicolumn{6}{|c|}{(6) Documentation} \\
+ \multicolumn{6}{|c|}{\normalsize\bfseries(6) Documentation} \\
  \hline
  6a & Package documentation was sparse and inconsistent and lacked long-form documentation & Comprehensive, and consistently formatted function documentation has been added, long-form documentation (vignettes) have been added, ... & Enhancement & \ghissue{111}, \ghissue{139}, \ghissue{140} & \ghpr{188}, \ghpr{201} \\
  \end{xltabular}
@@ -158,9 +180,48 @@ Label & Problem description & Change description & Change type & GitHub issue(s)
 
 \subsection*{Supplementary methods}
 
+\subsubsection*{Hellewell et al. (2020) parameters}
+
+Throughout the supplementary methods we refer to the parameters used in \cite{Hellewell2020}. Some of these parameters were extracted from the literature for COVID-19, or from related pathogens (e.g. SARS-CoV-1). Please see the table in \cite{Hellewell2020} for those sources. Here we provide the parameter space for that study for reference:
+
+\begin{table}[h!]
+\centering
+  \caption{Parameters in \cite{Hellewell2020}. Weibull parameters are shape ($k$) and scale ($\lambda$). The basic reproduction numbers ($R_0$ and $R_0^{iso}$) and the dispersion parameter ($k$) parameterise the negative binomial offspring distributions. Quarantine is not active in \cite{Hellewell2020}, so traced contacts are only isolated once they become symptomatic.}
+  \label{tab:hellewell-params}
+ \begin{tabularx}{\textwidth}{|L{0.85}|L{1.15}|}
+ \hline
+ \thcell{Parameter} & \thcell{Value} \\
+ \hline\hline
+ Initial cases & 5, 20, 40 \\
+ \hline
+ Percentage of contacts traced & 0\%, 20\%, 40\%, 60\%, 80\%, 100\% \\
+ \hline
+ Basic reproduction number in community ($R_0$) & 1.5, 2.5, 3.5 \\
+ \hline
+ Basic reproduction number in isolation ($R_0^{iso}$) & 0 \\
+ \hline
+ Dispersion ($k$) & 0.16 \\
+ \hline
+ Asymptomatic (subclinical) case percentage & 0\%, 10\% \\
+ \hline
+ Presymptomatic transmission percentage & 1\%, 15\%, 30\% \\
+ \hline
+ Onset-to-isolation delay & Short (SARS-like): Weibull, $k$ = 1.651524, $\lambda$ = 4.287786 (mean = 3.83 days). Long (Wuhan-like): Weibull, $k$ = 2.305172, $\lambda$ = 9.483875 (mean = 8.40 days). \\
+ \hline
+ Incubation period & Weibull, $k$ = 2.322737, $\lambda$ = 6.492272 (mean = 5.75 days) \\
+ \hline
+ Quarantine & inactive \\
+ \hline
+ Maximum number of days to simulate & 365 \\
+ \hline
+ Maximum number of cumulative cases to simulate & 5,000 \\
+ \hline
+ \end{tabularx}
+\end{table}
+
 \subsubsection*{Examining the effect of quarantine (1a \& 1b)}
 
-To examine the impact of the change in implementation of quarantine between pandemic and current versions of \texttt{ringbp} we run a comparison of the \cite{Hellewell2020} analysis, but with quarantine active (N.B. quarantine is inactive in all \cite{Hellewell2020} simulations). We compare the difference in the probability of outbreak extinction and the effective reproduction number from each simulation version. \\
+To examine the impact of the change in implementation of quarantine between pandemic (v0.1.0, commit \ghcommit{238b420}) and current (v2.0.0) versions of \texttt{ringbp} we run a comparison of the \cite{Hellewell2020} analysis, but with quarantine active (N.B. quarantine is inactive in all \cite{Hellewell2020} simulations, Table \ref{tab:hellewell-params}). We compare the difference in the probability of outbreak extinction and the effective reproduction number from each simulation version. \\
 
 We also isolate the differences caused by the changes in 1a and 1b individually. For 1a we run a parameter sweep over both the proportion of asymptomatic cases and probability that contacts are traced, from 0 to 1, at intervals of 0.2. This is carried out using the \texttt{ringbp} model directly before the change and directly after the change. All other model parameters are kept constant at the \cite{Hellewell2020} central values. For 1b we alter the onset-to-isolation delay mean between 2 and 12 days, at intervals of 2 days, and standard deviation between 1 and 6 days, at intervals of 1 day. Quarantine is active and it is assumed that no cases are asymptomatic and all contacts are traced. All other parameters are kept constant at the \cite{Hellewell2020} central values. We compare the differences in probability of outbreak extinction and effective reproduction number from before and after each change. \\
 
